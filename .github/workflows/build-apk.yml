@@ -32,13 +32,6 @@ jobs:
       - name: Sync web files
         run: npx cap sync android
 
-      - name: Force landscape + fullscreen
-        run: |
-          M=android/app/src/main/AndroidManifest.xml
-          sed -i 's|<activity|<activity android:screenOrientation="sensorLandscape"|' $M
-          S=android/app/src/main/res/values/styles.xml
-          sed -i 's|</style>|<item name="android:windowFullscreen">true</item></style>|' $S || true
-
       - name: Build debug APK
         working-directory: android
         run: chmod +x gradlew && ./gradlew assembleDebug
