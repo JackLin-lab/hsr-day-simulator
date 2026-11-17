@@ -1,0 +1,6 @@
+{
+  "appId": "com.jacklinlab.hsrdaysim",
+  "appName": "高鐵駕駛模擬器日間版",
+  "webDir": "www",
+  "android": { "allowMixedContent": true }
+}
